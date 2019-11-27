@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authenticator_navigation_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.mobiquity.feature.product.ui.ProductListFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/product_list">
+        <action
+            android:id="@+id/toProductDetail"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/productListFragment"
+            app:popUpToInclusive="false" />
+        <argument android:name="product" app:argType="com.mobiquity.data.tables.Product"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.mobiquity.feature.product.ui.ProductDetailFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/product_detail">
+        <argument android:name="product" app:argType="com.mobiquity.data.tables.Product"/>
+    </fragment>
+</navigation>

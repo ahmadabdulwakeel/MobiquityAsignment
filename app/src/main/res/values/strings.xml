@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mobiquity</string>
+    <string name="failure_network_connection">Cannot connect to the network.</string>
+    <string name="server_error">Please try again</string>
+</resources>
